@@ -36,3 +36,6 @@ class Page2ViewController: UIViewController {
     */
 
 }
+var test = 3
+
+
