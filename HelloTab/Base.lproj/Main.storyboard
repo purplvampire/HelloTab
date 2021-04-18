@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oHR-Cb-ca4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--第一頁-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloTab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiL-ue-nsB">
+                                <rect key="frame" x="10" y="54" width="394" height="749"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="EK0-oc-t2K">
+                                        <rect key="frame" x="0.0" y="266.5" width="394" height="216"/>
+                                        <locale key="locale" localeIdentifier="yue-Hant"/>
+                                        <connections>
+                                            <action selector="Test:" destination="BYZ-38-t0r" eventType="valueChanged" id="jfA-jm-y0d"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Z8-Ym-mcN">
+                                        <rect key="frame" x="0.0" y="44" width="394" height="107"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="ic8-Zj-IhV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Z8-Ym-mcN" secondAttribute="trailing" id="5Bn-fy-Iex"/>
+                                    <constraint firstAttribute="trailing" secondItem="EK0-oc-t2K" secondAttribute="trailing" id="JDL-ar-5XH"/>
+                                    <constraint firstItem="3Z8-Ym-mcN" firstAttribute="top" secondItem="AiL-ue-nsB" secondAttribute="top" constant="44" id="aRT-C6-QvI"/>
+                                    <constraint firstItem="EK0-oc-t2K" firstAttribute="leading" secondItem="AiL-ue-nsB" secondAttribute="leading" id="fl6-pL-8r7"/>
+                                    <constraint firstItem="3Z8-Ym-mcN" firstAttribute="leading" secondItem="AiL-ue-nsB" secondAttribute="leading" id="ocL-ia-gvM"/>
+                                    <constraint firstItem="EK0-oc-t2K" firstAttribute="centerY" secondItem="AiL-ue-nsB" secondAttribute="centerY" id="uud-XF-Zbr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="AiL-ue-nsB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="DRa-rt-0gb"/>
+                            <constraint firstItem="AiL-ue-nsB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="KbE-jx-bKQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AiL-ue-nsB" secondAttribute="bottom" constant="10" id="X7i-6P-je2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AiL-ue-nsB" secondAttribute="trailing" constant="10" id="X8J-wK-SEh"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="第一頁" image="square.and.arrow.up.fill" catalog="system" id="VEq-Xn-cde"/>
+                    <connections>
+                        <outlet property="displayLable" destination="3Z8-Ym-mcN" id="iZ9-hj-IJK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-710.14492753623199" y="768.75"/>
+        </scene>
+        <!--第二頁-->
+        <scene sceneID="pEd-2o-cI7">
+            <objects>
+                <viewController id="WXM-8O-7wF" customClass="Page2ViewController" customModule="HelloTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZO-sY-CwY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HOe-mU-3PF"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="第二頁" image="pencil" catalog="system" id="fXu-EH-wGB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mky-X7-p7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="769"/>
+        </scene>
+        <!--第三頁-->
+        <scene sceneID="REl-kZ-a5k">
+            <objects>
+                <viewController id="mv6-6M-39l" customClass="Page3ViewController" customModule="HelloTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPo-xI-Ikv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EWn-HU-joi"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="第三頁" image="square.and.arrow.up.on.square" catalog="system" id="Esw-AY-2Bj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qe-DA-AQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="769"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Edh-nx-riV">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="oHR-Cb-ca4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GrG-gG-QHr">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1GX-yp-feU"/>
+                        <segue destination="WXM-8O-7wF" kind="relationship" relationship="viewControllers" id="hdi-jt-uop"/>
+                        <segue destination="mv6-6M-39l" kind="relationship" relationship="viewControllers" id="pyo-TD-dJi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aja-A2-FLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="32.8125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <image name="square.and.arrow.up.on.square" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
